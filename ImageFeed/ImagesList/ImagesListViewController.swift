@@ -1,19 +1,19 @@
 import UIKit
 
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
 
 
-}
+
+
 class ImagesListViewController: UIViewController {
     @IBOutlet private var tableView: UITableView!
         
-    }
-
+    private lazy var dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .long
+        formatter.timeStyle = .none
+        return formatter
+    }()
+}
 
 extension ImagesListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -31,7 +31,6 @@ extension ImagesListViewController: UITableViewDataSource {
 
         return imageListCell
     }
-    
 }
 
 extension ImagesListViewController {

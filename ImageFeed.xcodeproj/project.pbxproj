@@ -11,7 +11,6 @@
 		A7D101CD2AEE7C7600CC6D83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D101CC2AEE7C7600CC6D83 /* AppDelegate.swift */; };
 		A7D101CF2AEE7C7600CC6D83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D101CE2AEE7C7600CC6D83 /* SceneDelegate.swift */; };
 		A7D101D42AEE7C7600CC6D83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7D101D22AEE7C7600CC6D83 /* Main.storyboard */; };
-		A7D101D72AEE7C7600CC6D83 /* ImageFeed.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A7D101D52AEE7C7600CC6D83 /* ImageFeed.xcdatamodeld */; };
 		A7D101D92AEE7C7600CC6D83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7D101D82AEE7C7600CC6D83 /* Assets.xcassets */; };
 		A7D101DC2AEE7C7700CC6D83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7D101DA2AEE7C7700CC6D83 /* LaunchScreen.storyboard */; };
 		A7D101E72AEE7C7700CC6D83 /* ImageFeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D101E62AEE7C7700CC6D83 /* ImageFeedTests.swift */; };
@@ -43,7 +42,6 @@
 		A7D101CC2AEE7C7600CC6D83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7D101CE2AEE7C7600CC6D83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A7D101D32AEE7C7600CC6D83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A7D101D62AEE7C7600CC6D83 /* ImageFeed.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ImageFeed.xcdatamodel; sourceTree = "<group>"; };
 		A7D101D82AEE7C7600CC6D83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A7D101DB2AEE7C7700CC6D83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A7D101DD2AEE7C7700CC6D83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -112,14 +110,13 @@
 		A7D101CB2AEE7C7600CC6D83 /* ImageFeed */ = {
 			isa = PBXGroup;
 			children = (
-				A7850FA92AEECB1C0042AD5E /* ImagesList */,
 				A7D101CC2AEE7C7600CC6D83 /* AppDelegate.swift */,
 				A7D101CE2AEE7C7600CC6D83 /* SceneDelegate.swift */,
+				A7850FA92AEECB1C0042AD5E /* ImagesList */,
 				A7D101D22AEE7C7600CC6D83 /* Main.storyboard */,
 				A7D101D82AEE7C7600CC6D83 /* Assets.xcassets */,
 				A7D101DA2AEE7C7700CC6D83 /* LaunchScreen.storyboard */,
 				A7D101DD2AEE7C7700CC6D83 /* Info.plist */,
-				A7D101D52AEE7C7600CC6D83 /* ImageFeed.xcdatamodeld */,
 			);
 			path = ImageFeed;
 			sourceTree = "<group>";
@@ -273,7 +270,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7FAAD022AEEF663002C115E /* ImagesListViewController.swift in Sources */,
-				A7D101D72AEE7C7600CC6D83 /* ImageFeed.xcdatamodeld in Sources */,
 				A7850FA82AEECB050042AD5E /* ImagesListCell.swift in Sources */,
 				A7D101CD2AEE7C7600CC6D83 /* AppDelegate.swift in Sources */,
 				A7D101CF2AEE7C7600CC6D83 /* SceneDelegate.swift in Sources */,
@@ -626,19 +622,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		A7D101D52AEE7C7600CC6D83 /* ImageFeed.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				A7D101D62AEE7C7600CC6D83 /* ImageFeed.xcdatamodel */,
-			);
-			currentVersion = A7D101D62AEE7C7600CC6D83 /* ImageFeed.xcdatamodel */;
-			path = ImageFeed.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = A7D101C12AEE7C7600CC6D83 /* Project object */;
 }
