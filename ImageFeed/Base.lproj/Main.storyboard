@@ -38,10 +38,17 @@
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J2K-4S-IFb">
-                                                    <rect key="frame" x="340" y="11" width="54" height="42"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J2K-4S-IFb">
+                                                    <rect key="frame" x="334" y="0.0" width="44" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="cu4-Nu-NJ3"/>
+                                                        <constraint firstAttribute="width" constant="44" id="xMF-z4-UbO"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                     <state key="normal" image="No Active"/>
+                                                    <connections>
+                                                        <action selector="likeButtom:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2pO-g7-SeI"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" name="backgroundColor"/>
@@ -50,6 +57,9 @@
                                                 <constraint firstAttribute="trailing" secondItem="HnT-VD-6L8" secondAttribute="trailing" constant="16" id="Emw-5F-DPC"/>
                                                 <constraint firstAttribute="bottom" secondItem="HnT-VD-6L8" secondAttribute="bottom" constant="4" id="QMo-N0-wW7"/>
                                                 <constraint firstItem="HnT-VD-6L8" firstAttribute="leading" secondItem="aMC-Mz-1of" secondAttribute="leading" constant="16" id="U8t-2c-Hy5"/>
+                                                <constraint firstItem="HnT-VD-6L8" firstAttribute="trailingMargin" secondItem="J2K-4S-IFb" secondAttribute="trailing" id="j9M-wp-PIk"/>
+                                                <constraint firstItem="J2K-4S-IFb" firstAttribute="leading" secondItem="HnT-VD-6L8" secondAttribute="leadingMargin" constant="310" id="lha-nq-HWj"/>
+                                                <constraint firstItem="HnT-VD-6L8" firstAttribute="topMargin" secondItem="J2K-4S-IFb" secondAttribute="top" constant="12" id="v09-5I-Qen"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>

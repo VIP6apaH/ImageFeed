@@ -7,6 +7,16 @@ import UIKit
 class ImagesListViewController: UIViewController {
     @IBOutlet private var tableView: UITableView!
         
+    @IBAction func likeButtom(_ sender: UIButton) {
+        if sender.currentImage == UIImage(named: "No Active.png"){
+            sender.setImage(UIImage(named:"Active.png"), for: .normal)
+        }
+        else {
+            sender.setImage( UIImage(named:"No Active.png"), for: .normal)
+        }
+    }
+        
+    
     private lazy var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateStyle = .long
