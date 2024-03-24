@@ -2,6 +2,7 @@ import Foundation
 
 final class OAuth2Service {
     static let shared = OAuth2Service()
+    
     private var currentTask: URLSessionTask?
     private var userСode: String?
     private var urlSession = URLSession.shared
@@ -10,7 +11,7 @@ final class OAuth2Service {
     
     init(
         urlSession: URLSession = .shared,
-        storage: OAuth2TokenStorage = .shared//
+        storage: OAuth2TokenStorage = .shared
     ){
         self.urlSession = urlSession
         self.storage = storage
@@ -28,15 +29,13 @@ final class OAuth2Service {
     var isAuthenticated: Bool {
         storage.token != nil
     }
-
+    
     
     func fetchOAuthToken(with code: String, completion: @escaping (Result<String, Error>) -> Void) {
         
         assert(Thread.isMainThread)
         guard code != userСode else { return }
         task?.cancel()
-        userСode = code
-        print("OK", "userСode:",userСode as Any)
         
         guard let request = makeRequest(code: code) else {
             assertionFailure("Error Reguest")
@@ -54,23 +53,21 @@ final class OAuth2Service {
                 self.storage.token = authToken
                 self.userСode = nil
                 completion(.success(authToken))
-                print(authToken)
             case .failure(let error):
                 self.userСode = nil
                 completion(.failure(error))
-                print(request)
             }
         }
-}
+    }
     
     func makeRequest(code: String) -> URLRequest? {
         var urlComponents = URLComponents(string: Constants.authTokenURL)
-         urlComponents?.queryItems = [
+        urlComponents?.queryItems = [
             URLQueryItem(name: "client_id", value: Constants.accessKey),
             URLQueryItem(name: "client_secret", value: Constants.secretKey),
             URLQueryItem(name: "redirect_uri", value: Constants.redirectURI),
             URLQueryItem(name: "code", value: code),
-            URLQueryItem(name: "grant_type", value: Constants.requestGrantType)
+            URLQueryItem(name: "grant_typ", value: Constants.requestGrantType)
         ]
         
         guard let urlWithQuery = urlComponents?.url else {

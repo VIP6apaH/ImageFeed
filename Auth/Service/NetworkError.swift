@@ -7,7 +7,6 @@ enum NetworkError: Error {
     case decodingError(Error)
     case invalidRequest
   }
-
 extension URLSession {
     func objectTask<T: Decodable>(for request: URLRequest, completion: @escaping (Result<T, Error>) -> Void) -> URLSessionTask {
 
@@ -41,10 +40,7 @@ extension URLSession {
           completionOnMainQueue(.failure(NetworkError.urlSessionError))
         }
       }
-
       task.resume()
-
       return task
-        
     }
 }
