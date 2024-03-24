@@ -7,7 +7,7 @@ final class SingleImageViewController: UIViewController {
     }
     
     @IBAction func didTapShareButton(_ sender: Any) {
-        let items:[Any] = [image]
+        let items:[Any] = [image!]
         let shareTuch = UIActivityViewController(activityItems: items, applicationActivities: nil)
         present(shareTuch, animated: true, completion: nil)
     }
