@@ -27,7 +27,7 @@ class ProfileViewController: UIViewController {
         fioLable.font = UIFont(name: "SF Pro Обычный ", size:23)
         nikLable.font = UIFont(name: "SF Pro Обычный ", size:13)
         textLable.font = UIFont(name: "SF Pro Обычный ", size:13)
-
+        
         
         fioLable.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(fioLable)
@@ -47,7 +47,7 @@ class ProfileViewController: UIViewController {
         ])
     }
     
-     func profilePhoto(){
+    func profilePhoto(){
         let profileImage = UIImage(named: "Photo")
         let imageView = UIImageView(image: profileImage)
         
@@ -58,12 +58,12 @@ class ProfileViewController: UIViewController {
         imageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 32).isActive = true
         imageView.widthAnchor.constraint(equalToConstant: 70).isActive = true
         imageView.heightAnchor.constraint(equalToConstant: 70).isActive = true
-
+        
     }
     
-     func outButton(){
+    func outButton(){
         let outButton = UIButton()
-         outButton.setImage(UIImage(named:"ipad.and.arrow.forward"), for: .normal)
+        outButton.setImage(UIImage(named:"ipad.and.arrow.forward"), for: .normal)
         
         outButton.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(outButton)
@@ -72,7 +72,7 @@ class ProfileViewController: UIViewController {
         outButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 55).isActive = true
         outButton.widthAnchor.constraint(equalToConstant: 44).isActive = true
         outButton.heightAnchor.constraint(equalToConstant: 44).isActive = true
-
+        
     }
 }
 
