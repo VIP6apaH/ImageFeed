@@ -25,12 +25,7 @@ final class OAuth2Service {
             storage.token = newValue
         }
     }
-    
-    var isAuthenticated: Bool {
-        storage.token != nil
-    }
-    
-    
+
     func fetchOAuthToken(with code: String, completion: @escaping (Result<String, Error>) -> Void) {
         
         assert(Thread.isMainThread)
