@@ -2,19 +2,10 @@ import Foundation
 
 final class OAuth2Service {
     
-    private var currentTask: URLSessionTask?
     private var userСode: String?
     private var urlSession = URLSession.shared
-    private let storage: OAuth2TokenStorage
+    private let storage = OAuth2TokenStorage.shared
     private var task : URLSessionTask?
-    
-    init(
-        urlSession: URLSession = .shared,
-        storage: OAuth2TokenStorage = .shared
-    ){
-        self.urlSession = urlSession
-        self.storage = storage
-    }
     
     private (set) var authToken: String? {
         get {
