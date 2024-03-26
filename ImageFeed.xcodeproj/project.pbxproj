@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A7220FD92BB27D88008F24D4 /* OAuthTokenResponseBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7220FD82BB27D88008F24D4 /* OAuthTokenResponseBody.swift */; };
 		A74108682B7F22840021D684 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74108672B7F22840021D684 /* ProfileViewController.swift */; };
 		A741086C2B80DEA00021D684 /* SingleImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A741086B2B80DEA00021D684 /* SingleImageViewController.swift */; };
 		A74108782B918E840021D684 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74108772B918E840021D684 /* Constants.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A7220FD82BB27D88008F24D4 /* OAuthTokenResponseBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthTokenResponseBody.swift; sourceTree = "<group>"; };
 		A74108672B7F22840021D684 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A741086B2B80DEA00021D684 /* SingleImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleImageViewController.swift; sourceTree = "<group>"; };
 		A74108772B918E840021D684 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				A7ED8CEA2BAAAE44009AD3A7 /* NetworkError.swift */,
+				A7220FD82BB27D88008F24D4 /* OAuthTokenResponseBody.swift */,
 				A7E401B72BA94E0F00F4394E /* OAuth2TokenStorage.swift */,
 				A7E401B02BA806AE00F4394E /* OAuth2Service.swift */,
 			);
@@ -353,6 +356,7 @@
 				A7E401B12BA806AE00F4394E /* OAuth2Service.swift in Sources */,
 				A741087A2B942A2C0021D684 /* AuthViewController.swift in Sources */,
 				A74108782B918E840021D684 /* Constants.swift in Sources */,
+				A7220FD92BB27D88008F24D4 /* OAuthTokenResponseBody.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

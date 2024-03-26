@@ -5,8 +5,8 @@ enum NetworkError: Error {
     case urlRequestError(Error)
     case urlSessionError
     case decodingError(Error)
-    case invalidRequest
-  }
+    case invalidRequest}
+
 extension URLSession {
     func objectTask<T: Decodable>(
             for request: URLRequest,

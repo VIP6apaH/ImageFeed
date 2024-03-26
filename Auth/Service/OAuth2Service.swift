@@ -8,13 +8,16 @@ final class OAuth2Service {
     private var urlSession = URLSession.shared
     private let storage: OAuth2TokenStorage
     private var task : URLSessionTask?
+    private let responseBody: OAuthTokenResponseBody
     
     init(
         urlSession: URLSession = .shared,
-        storage: OAuth2TokenStorage = .shared
+        storage: OAuth2TokenStorage = .shared,
+        responseBody: OAuthTokenResponseBody = .shared
     ){
         self.urlSession = urlSession
         self.storage = storage
+        self.responseBody = responseBody
     }
     
     private (set) var authToken: String? {
@@ -25,7 +28,7 @@ final class OAuth2Service {
             storage.token = newValue
         }
     }
-
+    
     func fetchOAuthToken(with code: String, completion: @escaping (Result<String, Error>) -> Void) {
         
         assert(Thread.isMainThread)
@@ -39,7 +42,7 @@ final class OAuth2Service {
         }
         
         task = urlSession.objectTask(for: request) {
-            [weak self] (result: Result<OAuthTokenResponseBody, Error>) in
+            [weak self] (result: Result<OAuthTokenResponseBody.ResponseBody, Error>) in
             guard let self else { return }
             self.task = nil
             switch result {
@@ -62,7 +65,7 @@ final class OAuth2Service {
             URLQueryItem(name: "client_secret", value: Constants.secretKey),
             URLQueryItem(name: "redirect_uri", value: Constants.redirectURI),
             URLQueryItem(name: "code", value: code),
-            URLQueryItem(name: "grant_typ", value: Constants.requestGrantType)
+            URLQueryItem(name: "grant_type", value: Constants.requestGrantType)
         ]
         
         guard let urlWithQuery = urlComponents?.url else {
@@ -74,21 +77,4 @@ final class OAuth2Service {
         
         return request
     }
-    
-    private struct OAuthTokenResponseBody: Codable {
-        let accessToken: String
-        let tokenType: String
-        let scope: String
-        let createdAt: Int
-        
-        enum CodingKeys: String, CodingKey {
-            case accessToken = "access_token"
-            case tokenType = "token_type"
-            case scope
-            case createdAt = "created_at"
-        }
-    }
 }
-
-
-

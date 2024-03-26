@@ -11,7 +11,7 @@ class ProfileViewController: UIViewController {
     }
     
     
-    private func lable(){
+    private func lable() {
         let fioLable = UILabel()
         let nikLable = UILabel()
         let textLable = UILabel()
@@ -47,7 +47,7 @@ class ProfileViewController: UIViewController {
         ])
     }
     
-    func profilePhoto(){
+    func profilePhoto() {
         let profileImage = UIImage(named: "Photo")
         let imageView = UIImageView(image: profileImage)
         
@@ -61,7 +61,7 @@ class ProfileViewController: UIViewController {
         
     }
     
-    func outButton(){
+    func outButton() {
         let outButton = UIButton()
         outButton.setImage(UIImage(named:"ipad.and.arrow.forward"), for: .normal)
         

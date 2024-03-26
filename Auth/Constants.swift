@@ -8,5 +8,6 @@ enum Constants {
     static let requestGrantType = "authorization_code"
     static let requestMethod = "POST"
     static let authTokenURL = "https://unsplash.com/oauth/token"
+    static let unsplashAuthorizeURLString = "https://unsplash.com/oauth/authorize"
 
 }
