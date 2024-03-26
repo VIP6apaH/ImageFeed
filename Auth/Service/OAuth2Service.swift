@@ -7,16 +7,13 @@ final class OAuth2Service {
     private var urlSession = URLSession.shared
     private let storage: OAuth2TokenStorage
     private var task : URLSessionTask?
-    private let responseBody: OAuthTokenResponseBody
     
     init(
         urlSession: URLSession = .shared,
-        storage: OAuth2TokenStorage = .shared,
-        responseBody: OAuthTokenResponseBody = .shared
+        storage: OAuth2TokenStorage = .shared
     ){
         self.urlSession = urlSession
         self.storage = storage
-        self.responseBody = responseBody
     }
     
     private (set) var authToken: String? {
@@ -41,7 +38,7 @@ final class OAuth2Service {
         }
         
         task = urlSession.objectTask(for: request) {
-            [weak self] (result: Result<OAuthTokenResponseBody.ResponseBody, Error>) in
+            [weak self] (result: Result<ResponseBody, Error>) in
             guard let self else { return }
             self.task = nil
             switch result {
