@@ -1,7 +1,6 @@
 import Foundation
 
 final class OAuth2Service {
-    static let shared = OAuth2Service()
     
     private var currentTask: URLSessionTask?
     private var userСode: String?
