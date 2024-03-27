@@ -1,6 +1,7 @@
 import Foundation
 
 final class OAuth2Service {
+    static let shared = OAuth2Service()
     
     private var userСode: String?
     private var urlSession = URLSession.shared
